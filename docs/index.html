@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Kirakós naptár megoldó</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Kirakós naptár</h1>
+      <p class="sub">
+        GitHub Pages-hez: tároló Settings → Pages → Branch <code>main</code>, mappa <code>/docs</code>.
+        PHP nem fut itt; minden számítás a böngészőben történik.
+      </p>
+
+      <div class="panel">
+        <div class="controls">
+          <label>
+            Hónap
+            <select id="month" aria-label="Hónap"></select>
+          </label>
+          <label>
+            Nap
+            <select id="day" aria-label="Nap"></select>
+          </label>
+          <div class="actions">
+            <button type="button" class="primary" id="solve">Megoldás</button>
+            <button type="button" class="secondary" id="clear">Törlés</button>
+          </div>
+        </div>
+        <p id="status"></p>
+      </div>
+
+      <div class="board-wrap">
+        <div id="board" aria-label="Naptár tábla (csak játszható mezők láthatók)"></div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-row">
+          <span><span class="swatch" style="background: var(--blocked)"></span> dátum (üres)</span>
+          <span><span class="swatch" style="background: var(--empty); border-color: #64748b"></span> üres mező</span>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
